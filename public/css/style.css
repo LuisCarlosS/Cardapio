@@ -1,0 +1,135 @@
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.topo{
+    background: #ffae1f url("../imagens/fundosite.png") no-repeat center;
+    background-size: cover;
+    height: 150px;
+}
+.logo{
+    max-height: 100px;
+}
+.input-topo{
+    border: none;
+}
+.input-topo:focus {
+    border-color: #cccccc;
+    outline: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+a{
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+}
+.chama-zap{
+    color: #25B825;
+}
+.favoritos{
+    border-radius: 5px;
+    color: #ffae1f;
+}
+.favoritos:hover{
+    color: #fff;
+}
+.produtos{
+    border-right: 2px solid rgb(220, 220, 220);
+    min-height: 70vh;
+}
+.conteudo{
+    min-height: 70vh;
+}
+.rodape{
+    background-color: #ffae1f;
+}
+.sal{
+    border-right: 2px solid rgb(220, 220, 220);
+}
+.rodape p{
+    font-weight: bold;
+    color: #fff;
+}
+.td-info{
+    align-items: flex-start;
+}
+.produtos ul{
+    padding-left: 0;
+}
+.produtos ul li{
+    color: black;
+    list-style-type: none;
+    padding-left: 5px;
+}
+.produtos ul a li{
+    background-color: #ffae1f;
+    border-bottom: 1px solid black;
+}
+.produtos ul a li:hover{
+    background-color: black;
+    color: #ffae1f;
+}
+.card {
+    box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.21);
+    margin-bottom: 1.5rem;
+}
+.card-body {
+display: flex;
+flex-direction: column;
+}
+
+.card .card-link {
+font-weight: bold;
+align-self: flex-end;
+}
+
+.card .card-title a{
+min-height: 50px;
+font-size: 0.9rem;
+color: #000000;
+}
+
+.card .card-title span{
+max-width: 200px;
+display: -webkit-box;
+-webkit-line-clamp: 3;
+-webkit-box-orient: vertical;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+.card .card-text {
+color: var(--villa-primary);
+margin: 0;
+min-height: 125px;
+display: -webkit-box;
+text-overflow: ellipsis;
+overflow: hidden;
+-webkit-line-clamp: 6;
+-webkit-box-orient: vertical;
+}
+
+.card-link{
+font-size: small;
+color: #ffae1f;
+}
+
+.card-link:hover{
+color: black;
+}
+
+.card img {
+width: 100%;
+height: 100%;
+}
+
+.card-img {
+height: 150px;
+border-bottom: 2px dashed var(--villa-primary);
+}
+
+.card-img img{
+object-fit: contain;
+}
