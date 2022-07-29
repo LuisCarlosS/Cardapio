@@ -2,55 +2,49 @@ body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .topo{
-    background: #ffae1f url("../imagens/fundosite.png") no-repeat center;
-    background-size: cover;
-    height: 150px;
+    background-color: #ffffff;
+    height: 80px;
+    border-bottom: 1px solid #c5c4c4;
 }
 .logo{
-    max-height: 100px;
+    max-height: 50px;
 }
-.input-topo{
-    border: none;
+.login, .login:hover{
+    color: #ea1d2c;
 }
-.input-topo:focus {
-    border-color: #cccccc;
-    outline: 0;
-    -webkit-box-shadow: none;
-            box-shadow: none;
+.rodape{
+    border-top: 1px solid #c5c4c4;
+}
+.categorias{
+    border: 1px solid #ea1d2c;
+    border-radius: 10px;
+    min-height: 70vh;
+}
+.categorias .categoria{
+    border: 1px solid #ea1d2c;
+    border-radius: 5px;
+    background-color: #ea1d2c;
+    color: #ffffff;
+    height: 100px;
+}
+.categorias a .categoria:hover{
+    background-color: #c3000d;
+}
+.categoria h4{
+    font-weight: bold;
+}
+.categoria p{
+    font-size: small;
+}
+.cadastrar-categoria{
+    border-right: 1px solid #c5c4c4;
+    padding-right: 2rem;
 }
 a{
     text-decoration: none;
 }
-
-nav ul li a:hover{
-    text-decoration: underline;
-}
-.chama-zap{
-    color: #25B825;
-}
-.favoritos{
-    border-radius: 5px;
-    color: #ffae1f;
-}
-.favoritos:hover{
-    color: #fff;
-}
-.produtos{
-    border-right: 2px solid rgb(220, 220, 220);
-    min-height: 70vh;
-}
 .conteudo{
-    min-height: 70vh;
-}
-.rodape{
-    background-color: #ffae1f;
-}
-.sal{
-    border-right: 2px solid rgb(220, 220, 220);
-}
-.rodape p{
-    font-weight: bold;
-    color: #fff;
+    min-height: 79vh;
 }
 .td-info{
     align-items: flex-start;

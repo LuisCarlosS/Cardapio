@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-class tipo_produto extends BaseModel
+class categoria extends BaseModel
 {
     protected $table = "categorias";
     protected $fillable = ['nome_categoria', 'descricao_categoria'];

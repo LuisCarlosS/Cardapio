@@ -12,6 +12,7 @@ class ProdutoController extends Controller
         try{
             $categoria = new categoria;
             $categoria->nome_categoria = $request->input("nome_categoria");
+            $categoria->descricao_categoria = $request->input("descricao_categoria");
 
             if(!$categoria->save()){
                 return back()->withErrors($categoria->getErrors());

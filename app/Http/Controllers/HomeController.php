@@ -13,11 +13,11 @@ class HomeController extends Controller
         $data = [];
 
         $queryproduto = new produto();
-        $queryproduto = $queryproduto->orderBy("nome_produto.produtos");
+        $queryproduto = $queryproduto->orderBy("nome_produto");
         $data["listaProdutos"] = $queryproduto->get(['id_produto', 'nome_produto', 'preco', 'foto', 'descricao_produto', 'situacao', 'categoria_id']);
 
         $querycategoria = new categoria();
-        $querycategoria = $querycategoria->orderBy("nome_categoria.categorias");
+        $querycategoria = $querycategoria->orderBy("nome_categoria");
         $data["listaCategorias"] = $querycategoria->get(['id_categoria','nome_categoria', 'descricao_categoria']);
 
         return view("home", $data);
