@@ -31,14 +31,21 @@ class ProdutoController extends Controller
             $produto = new produto;
             $produto->nome_produto = $request->input("nome_produto");
             $produto->preco = $request->input("preco");
-            $produto->foto = $request->file("foto") ? $request->file("foto")->getClientOriginalName() : null;
             $produto->descricao_produto = $request->input("descricao_produto");
             $produto->situacao = $request->input("situacao");
             $produto->categoria_id = $request->input("categoria_id");
             
             if ($request->hasFile('foto') && $request->foto->isValid()) {
-                $nameFoto = $request->file("foto")->getClientOriginalName();
-                $request->foto->storeAs('produtos', $nameFoto);
+
+                $requestFoto = $request->foto;
+
+                $extension = $requestFoto->extension();
+
+                $fotoName = md5($requestFoto->getClientOriginalName() . strtotime("now")) . "." . $extension;
+
+                $request->foto->storeAs('produtos', $fotoName);
+
+                $produto->foto = $fotoName;
             }
             
             if(!$produto->save()){
