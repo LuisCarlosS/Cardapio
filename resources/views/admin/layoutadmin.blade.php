@@ -17,6 +17,30 @@
         </div>
     </header>
 
+<div class="container">
+    </div>
+    @if(Session::has('success') && Session::get('success') != '')
+    <div class="m-2 alert alert-success">
+        {{ Session::get('success') }}
+    </div>
+    @endif
+
+    @if(Session::has('error') && Session::get('error') != '')
+    <div class="m-2 alert alert-warning">
+        {{ Session::get('error') }}
+    </div>
+    @endif
+
+    @if($errors->any())
+    <div class="m-2 alert alert-warning">
+        <ul>
+            @foreach($errors->all() as $erro)
+                <li>{{ $erro }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
+</div>
     
     @yield("conteudo")
 
