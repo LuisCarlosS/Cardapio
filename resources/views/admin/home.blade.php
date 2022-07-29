@@ -40,7 +40,7 @@
                         </div>
                         <div class="form-group mb-2 col-4">
                             <label>Categoria:</label><br>
-                            <select name="tipo_produto_id" id="tipo_produto_id" class="form-control">
+                            <select name="categoria_id" id="categoria_id" class="form-control">
                                 <option value=""></option>
                                 @if(isset($listaCategorias))
                                     @foreach($listaCategorias as $categorias)
