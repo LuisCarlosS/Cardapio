@@ -15,6 +15,9 @@
         <div>
             <a href="{{ route('home') }}"><img src="{{ asset('imagens/logo.png') }}" alt="" class="logo"></a>
         </div>
+        <div class="text-center favoritos">
+            <a href="{{ route('logout') }}" class="p-2 me-3 login">Sair</a>
+        </div>
     </header>
 
 <div class="container">
@@ -51,5 +54,16 @@
         </div>
     </footer>
 </body>
-<script type="text/javascript" src="{{ asset('js/mascara.js') }}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>
+<script>
+    $(document).ready(function(){
+   $('.money').mask('000.000.000.000.000,00', {reverse: true});
+  
+  $(".money").change(function(){
+    $("#value").html($(this).val().replace(/\D/g,''))
+  })
+  
+});
+</script>
 </html>

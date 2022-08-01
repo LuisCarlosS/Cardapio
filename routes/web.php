@@ -20,9 +20,10 @@ Route::middleware(['auth'])->prefix("admin")->name("admin.")->group(function(){
 Route::prefix("produto")->name("produto.")->group(function(){
 
     Route::post('/salvar-categoria', [ProdutoController::class, 'salvarCategoria'])->name("salvar-categoria");
+    Route::match(['get', 'post'], '/{id}/editar-categoria', [ProdutoController::class, 'editarCategoria'])->name("editar-categoria");
     Route::post('/salvar-produto', [ProdutoController::class, 'salvarProduto'])->name("salvar-produto");
-    Route::post('/editar-produto', [ProdutoController::class, 'editarProduto'])->name("editar-produto");
-    Route::post('/deletar-produto', [ProdutoController::class, 'deletarProduto'])->name("deletar-produto");
-    Route::get('/mostrar-produtos/{id}', [ProdutoController::class, 'mostrarProdutos'])->name("mostrar-produtos");
+    Route::match(['get', 'post'], '/{id}/editar-produto', [ProdutoController::class, 'editarProduto'])->name("editar-produto");
+    Route::delete('/{id}/deletar-produto', [ProdutoController::class, 'deletarProduto'])->name("deletar-produto");
+    Route::get('/{id}/mostrar-produtos', [ProdutoController::class, 'mostrarProdutos'])->name("mostrar-produtos");
 
 });

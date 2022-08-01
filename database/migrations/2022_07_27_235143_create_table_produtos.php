@@ -14,18 +14,18 @@ class CreateTableProdutos extends Migration
     public function up()
     {
         Schema::create('produtos', function (Blueprint $table) {
-            $table->increments('id_produto');
+            $table->increments('id');
 
-            $table->string('nome_produto', 150);
+            $table->string('nome_produto', 50);
             $table->string('preco', 30);
             $table->string('foto', 50);
-            $table->text('descricao_produto', 400);
-            $table->string('situacao', 20);
+            $table->text('descricao_produto', 180);
+            $table->string('situacao', 1);
 
             $table->integer('categoria_id')->unsigned();
 
             $table->foreign("categoria_id")
-                ->references("id_categoria")
+                ->references("id")
                 ->on("categorias");
             
 

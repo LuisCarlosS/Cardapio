@@ -25,7 +25,7 @@ body{
     border-radius: 5px;
     background-color: #ea1d2c;
     color: #ffffff;
-    height: 100px;
+    height: 120px;
 }
 .categorias a .categoria:hover{
     background-color: #c3000d;
@@ -46,84 +46,57 @@ a{
 .conteudo{
     min-height: 79vh;
 }
-.td-info{
-    align-items: flex-start;
-}
-.produtos ul{
-    padding-left: 0;
-}
-.produtos ul li{
-    color: black;
-    list-style-type: none;
-    padding-left: 5px;
-}
-.produtos ul a li{
-    background-color: #ffae1f;
-    border-bottom: 1px solid black;
-}
-.produtos ul a li:hover{
-    background-color: black;
-    color: #ffae1f;
-}
 .card {
-    box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.21);
+    box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.21);
     margin-bottom: 1.5rem;
-}
-.card-body {
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: row;
 }
 
-.card .card-link {
-font-weight: bold;
-align-self: flex-end;
+.card .detalhes-produto h4{
+    font-weight: bold;
+    max-width: 100vw;
+    min-height: 58px;
 }
 
-.card .card-title a{
-min-height: 50px;
-font-size: 0.9rem;
-color: #000000;
+.card .detalhes-produto p {
+    max-width: 100vw;    
+    min-height: 100px;
 }
-
-.card .card-title span{
-max-width: 200px;
-display: -webkit-box;
--webkit-line-clamp: 3;
--webkit-box-orient: vertical;
-overflow: hidden;
-text-overflow: ellipsis;
+.card .detalhes-produto span{
+    color: rgb(3, 174, 3);
 }
+.img-produto{
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+} 
 
-.card .card-text {
-color: var(--villa-primary);
-margin: 0;
-min-height: 125px;
-display: -webkit-box;
-text-overflow: ellipsis;
-overflow: hidden;
--webkit-line-clamp: 6;
--webkit-box-orient: vertical;
+.detalhes-produto{
+    padding: 0;
 }
-
-.card-link{
-font-size: small;
-color: #ffae1f;
+.img-produto img{
+    width: 150px;
+    object-fit: contain;
 }
-
-.card-link:hover{
-color: black;
+.desc textarea{
+    height: 6rem;
 }
-
-.card img {
-width: 100%;
-height: 100%;
+.table{
+    margin-top: 2.5rem;
+    overflow-x: scroll;
 }
-
-.card-img {
-height: 150px;
-border-bottom: 2px dashed var(--villa-primary);
+.table table th{
+    text-align: center;
 }
-
-.card-img img{
-object-fit: contain;
+.btn-edit,.btn-delete{
+    padding: 5px;
+}
+.editar, .deletar{
+    padding: 0;
+}
+.acao{
+    width: 75px;
+    padding: 10px;
 }
