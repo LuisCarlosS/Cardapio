@@ -14,10 +14,10 @@ class CreateTableCategorias extends Migration
     public function up()
     {
         Schema::create('categorias', function (Blueprint $table) {
-            $table->increments('id_categoria');
+            $table->increments('id');
 
-            $table->string('nome_categoria', 100);
-            $table->text('descricao_categoria', 200);
+            $table->string('nome_categoria', 30);
+            $table->text('descricao_categoria', 70);
 
             $table->timestamps();
         });
