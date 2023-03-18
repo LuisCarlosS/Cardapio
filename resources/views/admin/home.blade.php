@@ -56,7 +56,7 @@
                 @endif
 
             </div>
-            <div class="col-9 ps-4">
+            <div class="col-9 ps-4 dados-produto">
                 <h3 class="mb-3">Dados do produto</h3>
                 <form action="{{ route('produto.salvar-produto') }}" method="post" enctype="multipart/form-data">
                 <input type="hidden" name="id" value="{{ $prod->id}}">

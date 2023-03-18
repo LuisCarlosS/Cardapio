@@ -6,7 +6,7 @@
         @if(isset($listaProdutos))
             @foreach($listaProdutos as $produtos)
                 @if($categ->id == $produtos->categoria_id && $produtos->situacao == 1)
-                    <div class="col-5 card p-3 me-3">
+                    <div class="col-5 card p-3">
                         <div class="col-8 detalhes-produto me-3">
                             <h4>{{ $produtos->nome_produto }}</h4>
                             <p>{{ $produtos->descricao_produto }}</p>

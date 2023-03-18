@@ -26,6 +26,7 @@ body{
     background-color: #ea1d2c;
     color: #ffffff;
     height: 120px;
+    min-width: 115px;
 }
 .categorias a .categoria:hover{
     background-color: #c3000d;
@@ -67,7 +68,7 @@ a{
     color: rgb(3, 174, 3);
 }
 .img-produto{
-    padding: 0;
+    padding: 5px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -77,7 +78,7 @@ a{
     padding: 0;
 }
 .img-produto img{
-    width: 150px;
+    width: 100%;
     object-fit: contain;
 }
 .desc textarea{
@@ -99,4 +100,33 @@ a{
 .acao{
     width: 75px;
     padding: 10px;
+}
+
+@media (max-width: 500px) {
+    .categorias {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 992px) {
+    .card {
+        width: 100% !important;
+    }
+
+    .cadastrar-categoria,
+    .dados-produto {
+        width: 100% !important;
+    }
+
+    .dados-produto .form-group {
+        width: 100% !important;
+    }
+
+    .cadastrar-categoria {
+        border-right: none;
+        padding-right: 12px;
+        border-bottom: 1px solid #c5c4c4;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+    }
 }
