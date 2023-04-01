@@ -11,3 +11,5 @@ php artisan command:init-project email senha
 (Substituir "email" por um endereço de email e substituir "senha" pela senha desejada)
 
 O framework utilizado é o Laravel.
+
+Arquivo .sql incluso.
